@@ -1,0 +1,25 @@
+---
+install_packages:
+  - 'file'
+  - 'vim'
+  - 'less'
+  - 'molly-guard'
+  - 'screen'
+  - 'sl'
+  - 'mlocate'
+  - 'bc'
+  - 'htop'
+  - 'bash-completion'
+  - 'net-tools'
+remove_packages:
+  - 'nano'
+install_files:
+  - owner:              'root'
+    group:              'root'
+    mode:               '0644'
+    src:                "{{ role_path }}/files/conf/vimrc"
+    dest:               '/etc/vim/vimrc'
+lines_in_files:
+  - line:               'let g:skip_defaults_vim = 1'
+    regexp:             'skip_defaults_vim'
+    dest:               '/etc/vim/vimrc'
