@@ -13,6 +13,14 @@ install_packages:
   - 'net-tools'
 remove_packages:
   - 'nano'
+  - 'avahi-daemon'
+  - 'python-gobject'
+  - 'python-wicd'
+  - 'rfkill'
+  - 'snmpd'
+  - 'wicd-daemon'
+  - 'wicd-gtk'
+  - 'wolfram-engine'
 install_files:
   - owner:              'root'
     group:              'root'
