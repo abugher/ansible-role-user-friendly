@@ -21,6 +21,7 @@ remove_packages:
   - 'wicd-daemon'
   - 'wicd-gtk'
   - 'wolfram-engine'
+  - 'linux-stretch-root-next-orangepipcplus'
 install_files:
   - owner:              'root'
     group:              'root'
