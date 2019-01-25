@@ -124,3 +124,5 @@ if !exists("autocommands_loaded")
 endif
 
 let b:is_bash=1
+# https://github.com/vim/vim/issues/2042
+let g:skip_defaults_vim=1
