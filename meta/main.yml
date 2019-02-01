@@ -2,3 +2,5 @@
 dependencies:
   - role:       'python'
     when:       skipdeps is not defined
+  - role:       'hostname'
+    when:       skipdeps is not defined
