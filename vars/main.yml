@@ -28,10 +28,12 @@ install_files:
     mode:               '0644'
     src:                "{{ role_path }}/files/conf/vimrc"
     dest:               '/etc/vim/vimrc'
+banner_local_path:      "{{ role_path }}/../../inventory/hosts/{{ inventory_hostname }}/files/banner.txt"
+install_files_banner:
   - owner:              'root'
     group:              'root'
     mode:               '0644'
-    src:                "{{ role_path }}/../../inventory/hosts/{{ inventory_hostname }}/files/banner.txt"
+    src:                "{{ banner_local_path }}"
     dest:               '/etc/banner.txt'
 sync_dirs:
   - src:                'files/update-motd.d/'

@@ -2,4 +2,14 @@
 - include:              '../tasks/install_packages.yml'
 - include:              '../tasks/remove_packages.yml'
 - include:              '../tasks/install_files.yml'
+- name:                 'Checking for banner file.'
+  stat:
+    path:               "{{ banner_local_path }}"
+  delegate_to:          localhost
+  become:               'no'
+  register:             banner_check_result
+- include:              '../tasks/install_files.yml'
+  vars:
+    install_files:      "{{ install_files_banner }}"
+  when:                 banner_check_result.stat.exists
 - include:              '../tasks/sync_dirs.yml'
