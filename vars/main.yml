@@ -22,7 +22,6 @@ remove_packages:
   - 'wicd-gtk'
   - 'wolfram-engine'
   - 'linux-stretch-root-next-orangepipcplus'
-  - 'raspberrypi-sys-mods'
 install_files:
   - owner:              'root'
     group:              'root'
