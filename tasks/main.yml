@@ -2,8 +2,6 @@
 - include:              '../tasks/install_packages.yml'
 - include:              '../tasks/remove_packages.yml'
 - include:              '../tasks/install_files.yml'
-- include:              '../tasks/template_files.yml'
-- include:              '../tasks/symlinks.yml'
 - name:                 'Checking for banner file.'
   stat:
     path:               "{{ banner_local_path }}"

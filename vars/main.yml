@@ -38,18 +38,6 @@ install_files:
     mode:               '0644'
     src:                "{{ role_path }}/files/conf/keyboard"
     dest:               '/etc/default/keyboard'
-template_files:
-  - owner:              'root'
-    group:              'root'
-    mode:               '0644'
-    src:                "{{ role_path }}/templates/conf/timezone.j2"
-    dest:               '/etc/timezone'
-symlinks:
-  - owner:              'root'
-    group:              'root'
-    mode:               '0644'
-    src:                "/usr/share/zoneinfo/{{ timezone }}"
-    dest:               '/etc/localtime'
 banner_local_path:      "{{ role_path }}/../../inventory/hosts/{{ inventory_hostname }}/files/banner.txt"
 install_files_banner:
   - owner:              'root'
