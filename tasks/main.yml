@@ -5,7 +5,7 @@
 - name:                 'Checking for banner file.'
   stat:
     path:               "{{ banner_local_path }}"
-  delegate_to:          localhost
+  connection:           'local'
   become:               'no'
   register:             banner_check_result
 - include:              '../tasks/install_files.yml'
