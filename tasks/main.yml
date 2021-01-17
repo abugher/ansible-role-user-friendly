@@ -12,7 +12,6 @@
   vars:
     install_files:      "{{ install_files_banner }}"
   when:                 banner_check_result.stat.exists
-- include:              '../tasks/sync_dirs.yml'
 - include:              '../tasks/add_users_to_groups.yml'
   vars:
     add_users_to_groups:

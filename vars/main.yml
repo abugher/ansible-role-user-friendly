@@ -50,7 +50,3 @@ install_files_banner:
     mode:               '0644'
     src:                "{{ banner_local_path }}"
     dest:               '/etc/banner.txt'
-sync_dirs:
-  - src:                'files/update-motd.d/'
-    dest:               '/etc/update-motd.d/'
-    delete:             'yes'
