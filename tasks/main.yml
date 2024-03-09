@@ -1,19 +1,19 @@
 ---
-- include:              '../tasks/dependencies.yml'
-- include:              '../tasks/install_packages.yml'
-- include:              '../tasks/remove_packages.yml'
-- include:              '../tasks/install_files.yml'
+- include_tasks:        '../tasks/dependencies.yml'
+- include_tasks:        '../tasks/install_packages.yml'
+- include_tasks:        '../tasks/remove_packages.yml'
+- include_tasks:        '../tasks/install_files.yml'
 - name:                 'Checking for banner file.'
   stat:
     path:               "{{ banner_local_path }}"
   connection:           'local'
   become:               'no'
   register:             banner_check_result
-- include:              '../tasks/install_files.yml'
+- include_tasks:        '../tasks/install_files.yml'
   vars:
     install_files:      "{{ install_files_banner }}"
   when:                 banner_check_result.stat.exists
-- include:              '../tasks/add_users_to_groups.yml'
+- include_tasks:        '../tasks/add_users_to_groups.yml'
   vars:
     add_users_to_groups:
       - user:             "{{ owner }}"
