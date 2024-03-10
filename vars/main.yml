@@ -1,7 +1,4 @@
 ---
-dependencies:
-  - 'hostname'
-  - 'time'
 install_packages:
   - 'file'
   - 'vim'

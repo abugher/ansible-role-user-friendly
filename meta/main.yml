@@ -1,0 +1,8 @@
+---
+dependencies:
+  - role:     'hostname'
+    tags:     
+      - 'dependency'
+  - role:     'time'
+    tags:     
+      - 'dependency'
