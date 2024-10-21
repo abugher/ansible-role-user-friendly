@@ -6,3 +6,6 @@ dependencies:
   - role:     'time'
     tags:     
       - 'dependency'
+  - role:     'apt-repo-client'
+    tags:     
+      - 'dependency'
