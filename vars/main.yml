@@ -50,3 +50,7 @@ install_files_banner:
     mode:               '0644'
     src:                "{{ banner_local_path }}"
     dest:               '/etc/banner.txt'
+lines_in_files:
+  - path:               '/etc/bash.bashrc'
+    line:               "export PATH='/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/local/games:/usr/games'"
+    regexp:             'PATH='

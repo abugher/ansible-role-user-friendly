@@ -19,3 +19,4 @@
         groups:
           - 'sudo'
   when:                 owner is defined
+- include_tasks:        '../tasks/lines_in_files.yml'
