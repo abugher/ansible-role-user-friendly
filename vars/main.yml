@@ -54,3 +54,6 @@ lines_in_files:
   - path:               '/etc/bash.bashrc'
     line:               "export PATH='/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/local/games:/usr/games'"
     regexp:             'PATH='
+  - path:               '/etc/bash.bashrc'
+    line:               'set -o vi'
+    regexp:             'set -o vi$'
