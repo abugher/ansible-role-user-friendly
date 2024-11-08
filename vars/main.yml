@@ -26,24 +26,29 @@ install_files:
   - owner:              'root'
     group:              'root'
     mode:               '0644'
-    src:                "{{ role_path }}/files/conf/vimrc"
+    src:                "files/conf/vimrc"
     dest:               '/etc/vim/vimrc'
   - owner:              'root'
     group:              'root'
     mode:               '0644'
-    src:                "{{ role_path }}/files/conf/locale.gen"
+    src:                "files/conf/locale.gen"
     dest:               '/etc/locale.gen'
   - owner:              'root'
     group:              'root'
     mode:               '0644'
-    src:                "{{ role_path }}/files/conf/keyboard"
+    src:                "files/conf/keyboard"
     dest:               '/etc/default/keyboard'
   - owner:              'root'
     group:              'root'
     mode:               '0644'
-    src:                "{{ role_path }}/files/conf/inputrc"
+    src:                "files/conf/inputrc"
     dest:               '/etc/inputrc'
-banner_local_path:      "{{ role_path }}/../../inventory/hosts/{{ inventory_hostname }}/files/banner.txt"
+  - owner:              'root'
+    group:              'root'
+    mode:               '0644'
+    src:                "files/conf/sudoers.dmesg"
+    dest:               '/etc/sudoers.d/dmesg'
+banner_local_path:      "../../inventory/hosts/{{ inventory_hostname }}/files/banner.txt"
 install_files_banner:
   - owner:              'root'
     group:              'root'

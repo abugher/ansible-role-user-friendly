@@ -1,0 +1,6 @@
+# See:  man 5 sudoers
+#
+# Empty string in quotes allows no arguments.  No arguments specified allows
+# ANY arguments.  Any other arguments allow only exactly those arguments.
+
+%sudo   ALL=(ALL) NOPASSWD: /bin/dmesg "", /bin/dmesg -w, /bin/dmesg -W
