@@ -6,7 +6,7 @@ install_packages:
   - 'molly-guard'
   - 'screen'
   - 'sl'
-  - 'mlocate'
+  - 'plocate'
   - 'bc'
   - 'htop'
   - 'bash-completion'
